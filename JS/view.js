@@ -45,6 +45,11 @@ export function restartGame () {
     button.innerText = 'Play Again?';
     button.addEventListener('click', () => window.location.reload());
     main.innerHTML = `<h1>${message}</h1>`;
+
+    if (winLoseStatus === true ) {
     main.append(congratsImage, button);
+    } else {
+        main.append(button)
+    }
     button.focus()
 };

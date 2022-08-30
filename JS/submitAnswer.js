@@ -20,8 +20,8 @@ export function submitAnswer (e) {
     } else {
         restartGame();
         winLoseStatus = null
+        return
     }
-
     if (score === winningScore) {
         restartGame()
     } else {
@@ -37,4 +37,5 @@ export function submitAnswer (e) {
             congratsMessageDiv.remove();
             displayQuestion(newQuestion)}, 3000);
     }
+
 };
